@@ -36,6 +36,12 @@ public:
         public:
             virtual const char * what() const throw();
     };
+    class Notsinged:public std::exception
+    {
+        public:
+        virtual const char * what() const throw();
+
+    };
     const std::string getname() const;
     std::string getTarget() const;
 };

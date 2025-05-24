@@ -2,8 +2,8 @@ NAME =  Form
 
 CC = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = Bureaucrat.cpp main.cpp Form.cpp
-HEAD = Bureaucrat.hpp Form.hpp 
+SRC = Bureaucrat.cpp main.cpp AForm.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp
+HEAD = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp ShrubberyCreationForm.hpp
 OBJ =$(SRC:.cpp=.o)
 
 %.o: %.cpp $(HEAD)

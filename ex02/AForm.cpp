@@ -6,7 +6,7 @@
 /*   By: yojablao <yojablao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 17:11:17 by yojablao          #+#    #+#             */
-/*   Updated: 2025/05/24 13:27:34 by yojablao         ###   ########.fr       */
+/*   Updated: 2025/05/24 17:06:01 by yojablao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,10 @@ const char *AForm::GradeTooHighException::what() const throw()
 const char *AForm::GradeTooLowException::what() const throw()
 {
     return("grade low.");      
+}
+const char *AForm::Notsinged::what() const throw()
+{
+    return ("the Form is not signed ");
 }
 
 

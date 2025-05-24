@@ -5,8 +5,8 @@
 #include  <iostream> 
 #include  <exception> 
 #include  <string>
-#include "Form.hpp"
-class Form; 
+#include "AForm.hpp"
+class AForm; 
 class Bureaucrat
 {
 private:
@@ -33,7 +33,8 @@ public:
 
     void increment();
     void decrement();
-    void signForm(Form &o);
+    void signForm(AForm &o);
+    void executeForm(AForm const & form);
 
 
 };
