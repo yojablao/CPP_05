@@ -7,7 +7,6 @@ int main() {
         Bureaucrat alice("Alice", 50);
         Bureaucrat bob("Bob", 100); 
         Form taxForm("TaxForm", 100, 50); 
-        // Form taxForm("TaxForm", 100, 50); 
 
         std::cout << "Initial State:" << std::endl;
         std::cout << alice << std::endl;
