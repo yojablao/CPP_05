@@ -1,7 +1,18 @@
 #include "ShrubberyCreationForm.hpp"
 #include <fstream>
-ShrubberyCreationForm::ShrubberyCreationForm(std::string tar):AForm("shrubbery",145,137,tar){}
+ShrubberyCreationForm::ShrubberyCreationForm(std::string tar):AForm(tar + "_shrubbery",145,137,tar){}
 ShrubberyCreationForm::~ShrubberyCreationForm(){}
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &o)
+{
+    *this = o;
+}
+ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &o)
+{
+    if(this != &o)
+        AForm::operator=(o);
+    return *this;
+}
+ShrubberyCreationForm::ShrubberyCreationForm():AForm("_shrubbery",145,137,"no target"){}
 void ShrubberyCreationForm::execute(Bureaucrat const &bureau) const
 {
     if(!getsign())

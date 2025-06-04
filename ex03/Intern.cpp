@@ -13,10 +13,22 @@ AForm &Intern::makeForm(std::string form,std::string tar)
             AForm *holder = fn[i](tar);
             return *holder;
         }
-            
     }
     throw std::invalid_argument("Bad form type: " + form);
 }
+Intern::Intern(){}
+Intern::Intern(const Intern&o)
+{*this = o;} 
+Intern& Intern::operator=(const Intern &o)
+{
+    if(this != &o)
+    {
+        *this = o;
+    }
+    return *this;
+}
+Intern::~Intern(){}
+
 AForm* Intern::createRobotomyRequestForm(const std::string& target) {
     return new RobotomyRequestForm(target);
 }

@@ -11,6 +11,10 @@ class Intern
         static  AForm *createRobotomyRequestForm(const std::string & tar);
         static  AForm *createShrubberyCreationForm(const std::string & tar);
     public:
+        Intern();
+        Intern(const Intern&);
+        ~Intern();
+        Intern& operator=(const Intern&);
         AForm &makeForm(std::string form,std::string tar);
 
 };

@@ -6,13 +6,13 @@
 /*   By: yojablao <yojablao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 17:11:17 by yojablao          #+#    #+#             */
-/*   Updated: 2025/05/24 17:06:01 by yojablao         ###   ########.fr       */
+/*   Updated: 2025/05/30 14:07:27 by yojablao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
 
-AForm::AForm():Name("AForm"),gradrequired(150),gradexecute(150),sing(0){}
+AForm::AForm():Name("Form"),gradrequired(150),gradexecute(150),sing(0){}
 AForm::AForm(const std::string s,int gradre,int gradeexce,std::string target):Name(s),gradrequired(gradre),gradexecute(gradeexce),sing(false),target(target)
 {
     if(gradre < 1 || gradeexce < 1)

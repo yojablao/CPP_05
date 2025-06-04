@@ -1,7 +1,20 @@
 #include "RobotomyRequestForm.hpp"
 
 
-RobotomyRequestForm::RobotomyRequestForm(std::string tar):AForm("robotomy",72,45,tar){}
+RobotomyRequestForm::RobotomyRequestForm(std::string tar):AForm(tar + "_robotomy",72,45,tar){}
+RobotomyRequestForm::RobotomyRequestForm():AForm("robotomy",72,45,"no target"){}
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &o)
+{
+    *this = o;
+
+}
+RobotomyRequestForm & RobotomyRequestForm::operator=(const RobotomyRequestForm &o)
+{
+    if(this != &o)
+        AForm::operator=(o);
+    return *this;
+
+}
 RobotomyRequestForm::~RobotomyRequestForm(){}
 void RobotomyRequestForm::execute(Bureaucrat const  &o) const
 {
